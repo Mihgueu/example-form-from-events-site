@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Criação de evento</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Crie e compartilhe <br> seu evento.
+      </h1>
+      <p>O primeiro passo, é preencher esse <br> formulário de inscrição.
+      </p>
+    </header>
+    <form id="event-form">
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Informações do evento</legend>
+
+            <div class="input-wrapper">
+
+              <label for="event-title">Título do evento <span>(mínimo 8 caracteres)</span></label>
+              <input 
+              required 
+              type="text" 
+              id="event-title"
+              minlength="8" />
+
+            </div>
+            <div class="input-wrapper">
+
+              <label for="event-link">Link do evento <span>(apenas links)</span></label>
+              <input type="url" id="event-link" />
+
+            </div>
+            <div class="input-wrapper">
+
+              <label for="event-whatsapp">Whatsapp para contato <span>(apenas o seu número de celular)</span></label>
+              <input required type="tel" id="event-whatsapp" />
+
+            </div>
+            <div class="input-wrapper">
+
+              <label for="event-more-info">Informações extras</label>
+              <textarea name="more-info" id="event-more-info" cols="30" rows="10"></textarea>
+            </div>
+            <div class="input-wrapper">
+              <label for="event-category">Categoria</label>
+              <select id="event-category">
+                <option value="live">Ao vivo</option>
+                <option value="podecast">Podcast</option>
+                <option value="mentorship">Mentoria</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Privacidade</legend>
+            <div class="input-wrapper">
+
+              <label for="event-email">E-mail do administrador <span>(digite um email válido)</span></label>
+              <input required type="email" id="event-email" />
+
+            </div>
+            <div class="input-wrapper">
+
+              <label for="event-password">Senha de acesso para os participantes <span>(no mínimo 8 caracteres)</span></label>
+              <input required minlength="8" type="password" id="event-password" />
+
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="event-private" />
+              <label for="event-private">Evento privado</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Dia e Hora</legend>
+            <div class="a3-col">
+
+              <div class="input-wrapper">
+                <label for="event-date">Data</label>
+                <input required type="date" id="event-date" />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="event-initial-hour">Das</label>
+                <input required type="time" id="event-initial-hour" />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="event-final-hour">Até</label>
+                <input required type="time" id="event-final-hour" />
+              </div>
+
+            </div>
+          </div>
+        </fieldset>
+    </form>
+
+        <footer>
+          <input 
+          form="event-form"
+          class="button" 
+          type="submit" 
+          value="Salvar evento"
+          >
+        </footer>
+  </div>
+</body>
+</html>
